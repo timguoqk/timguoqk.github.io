@@ -2,7 +2,7 @@
 layout: post
 title:  "Start of the blog!"
 date:   2014-01-17 21:10:52
-categories: milestone
+category: blog
 ---
 
 This is the first blog of this website.

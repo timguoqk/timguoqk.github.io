@@ -1,0 +1,8 @@
+---
+layout:   proj
+title:    "Mo, a photo gallery"
+date:     2014-03-05
+category: rails
+link:     ""
+git:      "https://github.com/CreativeMediaWorkshop/CreativeMediaWorkshop"
+---
