@@ -7,4 +7,4 @@ link:     "http://timguoqk.me/bar"
 git:      "https://github.com/timguoqk/enrollment-bar"
 ---
 
-Bar charts of UCLA enrollment data.
+Bar charts of UCLA enrollment data. Built with D3.js.

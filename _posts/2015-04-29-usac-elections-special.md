@@ -7,3 +7,4 @@ link:     "http://dailybruin.com/usac-election-2015/"
 git:      "https://github.com/daily-bruin/caeruleum/blob/master/pages/page-usac-elections-2015.php"
 ---
 
+The Daily Bruin news page for UCLA's USAC 2015 elcection. 

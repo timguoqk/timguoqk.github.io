@@ -7,3 +7,6 @@ link:     "https://pypi.python.org/pypi/gdoc-json-parser"
 git:      "https://github.com/timguoqk/gdoc-json-parser"
 ---
 
+Convert Google spreadsheet to clean json file.
+
+Published to PyPI.
