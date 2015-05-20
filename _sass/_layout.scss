@@ -235,7 +235,8 @@
     }
 }
 
-.proj-content {
+#proj-content {
+    padding-left: 2 * $spacing-unit;
     margin-bottom: $spacing-unit;
 
     h2 {
