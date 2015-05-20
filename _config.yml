@@ -12,3 +12,6 @@ github_username:  timguoqk
 
 # Build settings
 markdown: kramdown
+
+# Other settings
+permalink: none
