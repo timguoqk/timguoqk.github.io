@@ -2,7 +2,7 @@
 layout:   proj
 title:    "Academia, a course review and academic news platform"
 date:     2014-02-14
-category: Rails
+category: web
 git:      "https://github.com/timguoqk/Academia-Course"
 ---
 
