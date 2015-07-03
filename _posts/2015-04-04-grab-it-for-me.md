@@ -31,4 +31,4 @@ Animation using pop and the cool voice recognition view.
 
 ## What's next for grabItForMe
 
-Location-based push notifications. Payment system
+Location-based push notifications. Payment system.

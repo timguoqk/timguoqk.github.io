@@ -2,8 +2,8 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    // border-top: 5px solid $grey-color-dark;
+    // border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -277,4 +277,12 @@ img.proj-img {
 
 .page-content .breadcrumb {
     margin-left: 2 * $spacing-unit;
+}
+
+.item .description {
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }

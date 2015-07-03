@@ -1,7 +1,7 @@
 ---
 layout:   proj
 title:    "Some pre-college works"
-date:     2014-02-14
+date:     2014-01-01
 category: others
 images: 
   - 20140101_mario.jpg
