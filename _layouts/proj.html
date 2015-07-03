@@ -4,8 +4,8 @@ layout: default
 <div class="ui breadcrumb">
 	<a class="section" href="/">Home</a>
 	{% if page.category %}
-	<i class="right chevron icon divider"></i>
-	<a class="section" href="/{{ page.category }}">{{ page.category }}</a>
+		<i class="right chevron icon divider"></i>
+		<a class="section" href="/{{ page.category }}">{{ page.category }}</a>
 	{% endif %}
 	<i class="right chevron icon divider"></i>
 	<div class="active section">{{ page.title }}</div>
@@ -19,9 +19,9 @@ layout: default
 
 	<div class="centered row">
 		<article class="twelve wide column" id="proj-content">
-			<div class="row">
+			<div class="row images">
 				{% for img in page.images %}
-					<img class="proj-img" src="../img/{{ img }}" alt="">
+					<a href="../img/{{ img }}" data-lightbox="main"><img class="proj-img" src="../img/{{ img }}" alt=""></a>
 				{% endfor %}
 			</div>
 			<div class="row">{{ content }}</div>
