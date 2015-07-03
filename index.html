@@ -4,19 +4,27 @@ layout: default
 <div class="wrapper">
 	<div class="home">
 
-	  <ul class="post-list">
-	    {% for post in site.posts %}
-	      <li>
-	        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-	        <h2>
-	          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-	        </h2>
-	      </li>
-	    {% endfor %}
-	  </ul>
-	  
-	  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+	<div class="ui relaxed divided items">
+		{% for post in site.posts %}
+			<div class="item">
+				{% if post.images %}
+					<div class="ui small image">
+						<img src="img/{{ post.images[0] }}" alt="">
+					</div>
+				{% endif %}
+				<div class="content">
+					<a href="{{ post.url | prepend: site.baseurl }}" class="header">{{ post.title }}</a>
+					<div class="meta">
+						<a>{{ post.date | date: "%b %-d, %Y" }}</a>
+						<a>{{ post.category }}</a>
+					</div>
+					<div class="description">{{ post.content | strip_html | truncatewords:50}}...</div>
+					<div class="extra"></div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 	</div>
 </div>

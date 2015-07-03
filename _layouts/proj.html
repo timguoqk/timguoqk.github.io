@@ -19,20 +19,27 @@ layout: default
 
 	<div class="centered row">
 		<article class="twelve wide column" id="proj-content">
-			{{ content }}
+			<div class="row">
+				{% for img in page.images %}
+					<img class="proj-img" src="../img/{{ img }}" alt="">
+				{% endfor %}
+			</div>
+			<div class="row">{{ content }}</div>
 		</article>
 
 		<div class="four wide column ui vertical text menu" id="proj-info">
-			<div class="header item">For More Information...</div>
-			{% if page.git %}
-			<a href={{ page.git }} class="item proj-github">
-				<i class="large github square icon"></i> Github
-			</a>
-			{% endif %}
-			{% if page.link %}
-			<a href={{ page.link }} class="item proj-link">
-				<i class="large external icon"></i> Web Page
-			</a>
+			{% if page.git or page.link%}
+				<div class="header item">For More Information...</div>
+				{% if page.git %}
+				<a href={{ page.git }} class="item proj-github">
+					<i class="large github square icon"></i> Github
+				</a>
+				{% endif %}
+				{% if page.link %}
+				<a href={{ page.link }} class="item proj-link">
+					<i class="large external icon"></i> Web Page
+				</a>
+				{% endif %}
 			{% endif %}
 		</div>
 	</div>
