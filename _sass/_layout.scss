@@ -264,19 +264,9 @@
     }
 }
 
-img.proj-img {
-    height: 200px;
-    margin-right: $spacing-unit;
-    margin-bottom: $spacing-unit;
-    // max-width: 200px;
-}
-
 .row.images {
+    margin-top: $spacing-unit;
     margin-bottom: 2 * $spacing-unit;
-}
-
-.page-content .breadcrumb {
-    margin-left: 2 * $spacing-unit;
 }
 
 .item .description {

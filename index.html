@@ -7,11 +7,12 @@ layout: default
 	<div class="ui relaxed divided items">
 		{% for post in site.posts %}
 			<div class="item">
-				{% if post.images %}
-					<div class="ui small image">
+				<div class="ui small image">
+					{% if post.images %}
 						<img src="img/{{ post.images[0] }}" alt="">
-					</div>
-				{% endif %}
+					{% endif %}
+				</div>
+				
 				<div class="content">
 					<a href="{{ post.url | prepend: site.baseurl }}" class="header">{{ post.title }}</a>
 					<div class="meta">
@@ -28,4 +29,3 @@ layout: default
 
 	</div>
 </div>
-
