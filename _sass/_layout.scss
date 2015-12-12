@@ -1,5 +1,5 @@
 body {
-	margin: 40px;
+	margin: $margin-size;
 }
 
 #site-sidebar {
@@ -8,17 +8,47 @@ body {
 	justify-content: center;
 	flex-direction: column;
 	float: left;
-	width: 360px;
-	height: calc(100vh - 80px);
+	width: $sidebar-width;
+	margin-right: $margin-size;
+	height: calc(100vh - #{$margin-size * 2});
 	
-	font-family: "courier-prime", monospace;
+	font-family: $title-font;
+
 	h1 {
 		font-weight: bold;
-		font-size: 36px;
+		font-size: $title-size;
 	}
 	a {
-		color: #9E9E9E;
-		font-size: 24px;
+		color: $subtitle-color;
+		font-size: $subtitle-size;
+	}
+
+	@media screen and (max-width: $hd) {
+		width: $sidebar-width / 1.2;
+		h1 {
+			font-size: $title-size / 1.5;
+		}
+		a {
+			font-size: $subtitle-size / 1.5;
+		}
+	}
+
+	@media screen and (max-width: $tablet) {
+		width: $sidebar-width;
+	}
+
+	@media screen and (max-width: $mobile) {
+		float: none;
+		width: 100%;
+		height: auto;
+		margin-bottom: 15px;
+		align-items: flex-start;
+
+		h1 {
+			font-size: $title-size;
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
 	}
 }
 
@@ -26,7 +56,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	height: calc(100vh - 80px);
+	height: calc(100vh - #{$margin-size * 2 + $mobile-bar-height});
 
 	perspective: 1700px;
 }
@@ -39,14 +69,14 @@ body {
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	}
 
-	flex-basis: 32%;
+	flex-basis: $box-width;
 	margin-bottom: 25px;
 
 	position: relative;
 
 	>img {
 		object-fit: cover;
-		background-color: #F5F5F5;
+		background-color: $box-color;
 		backface-visibility: hidden; 
 		position: absolute;
 		top: 0; bottom: 0; left: 0; right: 0;
@@ -60,17 +90,9 @@ body {
 
 	transform-style: preserve-3d;
 	&.flipped {
-		transform: rotateY(180deg) !important;
+		transform: rotateY(180deg);
 	}
 }
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 
 @keyframes fadeInUp {
 	from {

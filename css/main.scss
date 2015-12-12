@@ -3,33 +3,18 @@
 ---
 @charset "utf-8";
 
-// Our variables
-$base-font-size:   16px;
-$small-font-size:  0.875 * $base-font-size;
-$base-line-height: 1.5;
+$title-font: "courier-prime", monospace;
+$title-size: 36px;
+$subtitle-size: 24px;
+$subtitle-color: #9E9E9E;
+$margin-size: 40px;
+$sidebar-width: 20%;
+$box-width: 32%;
+$box-color: #F5F5F5;
+$mobile-bar-height: 75px;
 
-$spacing-unit:     30px;
+$mobile: 590px;
+$tablet: 700px;
+$hd: 1024px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    1024px;
-
-$on-mobile: 600px;
-$on-tablet: 700px;
-$on-hd: 800px;
-
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-// @import "semantic-ui", "layout";
 @import "layout";
