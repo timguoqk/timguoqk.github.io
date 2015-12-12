@@ -1,24 +1,68 @@
 ---
 layout: default
 ---
-<!-- TODO: lazy loading may be helpful -->
-<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
-<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
-<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
-<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
-<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
-<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
-<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
-<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
-<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
+<a class="box-wrapper"><img class="front"><img class="back"></a>
+<a class="box-wrapper"><img class="front"><img class="back"></a>
+<a class="box-wrapper"><img class="front"><img class="back"></a>
+<a class="box-wrapper"><img class="front"><img class="back"></a>
+<a class="box-wrapper"><img class="front"><img class="back"></a>
+<a class="box-wrapper"><img class="front"><img class="back"></a>
+<a class="box-wrapper"><img class="front"><img class="back"></a>
+<a class="box-wrapper"><img class="front"><img class="back"></a>
+<a class="box-wrapper"><img class="front"><img class="back"></a>
 
 <script>
-	var num_boxes = 9;
 	$(function() {
+		$('.box-wrapper').css('opacity', '0');
 		$.getJSON('projects.json', function(data) {
-			var data = _.sample(data, num_boxes);
-			var boxes = $('.box-wrapper');
+			var data = _.shuffle(data);
 
+			// Initialization
+			$('.box-wrapper').each(function(i) {
+				var box = $(this);
+				box.children('.front').attr('src', data[0].img);
+				box.attr('href', data[0].url);
+				_.delay(function() {
+					box.css('opacity', '1');
+					box.addClass('fadeInUp');
+					_.delay(function() { box.removeClass('fadeInUp'); }, 1000);
+				}, 150 * i);
+				data.push(data[0]);
+				data.shift();
+			});
+
+			var shouldFindFlipped = true;
+
+			function update() {
+				var box, img;
+				if (shouldFindFlipped) {
+					var box = _.sample($('.box-wrapper.flipped'));
+					if (!box) {
+						shouldFindFlipped = !shouldFindFlipped;
+						update();
+						return;
+					}
+					box = $(box);
+					img = box.children('img.front');
+				} else {
+					var box = _.sample($('.box-wrapper:not(.flipped)'));
+					if (!box) {
+						shouldFindFlipped = !shouldFindFlipped;
+						update();
+						return;
+					}
+					box = $(box);
+					img = box.children('img.back');
+				}
+				img.attr('src', data[0].img);
+				box.attr('href', data[0].url);
+				_.delay(function() { box.toggleClass('flipped'); }, 500);
+
+				data.push(data[0]);
+				data.shift();
+				window.setTimeout(update, 1000);
+			}
+			window.setTimeout(update, 5000);
 		});
 	});
 </script>

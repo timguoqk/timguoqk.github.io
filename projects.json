@@ -5,7 +5,7 @@ layout: null
 {% for post in site.posts %}
   {
     "url": "{{ post.url }}",
-    "img": "{{ post.images[0] }}"
+    "img": {% if post.images %} "img/{{ post.images[0] }}" {% else %} null {% endif %}
   } {% if forloop.last %} {% else %},{% endif %}
 {% endfor %}
 ]
