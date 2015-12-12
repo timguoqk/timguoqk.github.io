@@ -14,3 +14,6 @@ markdown: kramdown
 
 # Other settings
 permalink: none
+
+gems:
+  - octopress-autoprefixer

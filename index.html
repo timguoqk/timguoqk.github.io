@@ -1,31 +1,24 @@
 ---
 layout: default
 ---
-<div class="wrapper">
-	<div class="home">
+<!-- TODO: lazy loading may be helpful -->
+<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
+<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
+<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
+<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
+<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
+<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
+<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
+<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
+<div class="box-wrapper"><img class="front active" src="http://placehold.it/320x220"><img class="back" src="http://placehold.it/320x220"></div>
 
-	<div class="ui relaxed divided items">
-		{% for post in site.posts %}
-			<div class="item">
-				<div class="ui small image">
-					{% if post.images %}
-						<img src="img/{{ post.images[0] }}" alt="">
-					{% endif %}
-				</div>
-				
-				<div class="content">
-					<a href="{{ post.url | prepend: site.baseurl }}" class="header">{{ post.title }}</a>
-					<div class="meta">
-						<a>{{ post.date | date: "%b %-d, %Y" }}</a>
-						<a>{{ post.category }}</a>
-					</div>
-					<div class="description">{{ post.content | strip_html | truncatewords:50}}...</div>
-					<div class="extra"></div>
-				</div>
-			</div>
-		{% endfor %}
-	</div>
-	<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<script>
+	var num_boxes = 9;
+	$(function() {
+		$.getJSON('projects.json', function(data) {
+			var data = _.sample(data, num_boxes);
+			var boxes = $('.box-wrapper');
 
-	</div>
-</div>
+		});
+	});
+</script>

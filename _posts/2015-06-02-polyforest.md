@@ -11,4 +11,4 @@ images:
   - 20150602_polyforest2.png
 ---
 
-Inspired by Radiohead's [PolyFauna](http://www.radiohead.com/deadairspace/140211/PolyFauna), PolyForest is a music visualizer based on WebGL. I implemented the lighting system (GLSL shaders), music analyzer (Web Audio API) and gyroscope event handler.
+Inspired by Radiohead's [PolyFauna](http://www.radiohead.com/deadairspace/140211/PolyFauna), PolyForest is a music visualizer powered by WebGL. I implemented the lighting system (GLSL shaders), music analyzer (Web Audio API) and gyroscope event handler.

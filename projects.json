@@ -1,0 +1,11 @@
+---
+layout: null
+---
+[
+{% for post in site.posts %}
+  {
+    "url": "{{ post.url }}",
+    "img": "{{ post.images[0] }}"
+  } {% if forloop.last %} {% else %},{% endif %}
+{% endfor %}
+]
