@@ -56,9 +56,13 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	height: calc(100vh - #{$margin-size * 2 + $mobile-bar-height});
+	height: calc(100vh - #{$margin-size * 2});
 
 	perspective: 1700px;
+
+	@media screen and (max-width: $mobile) {
+		height: calc(100vh - #{$margin-size * 2 + $mobile-bar-height});
+	}
 }
 
 .box-wrapper {
@@ -89,8 +93,9 @@ body {
 	}
 
 	transform-style: preserve-3d;
+	transform-origin: right center;
 	&.flipped {
-		transform: rotateY(180deg);
+		transform: translateX(-100%) rotateY(-180deg);
 	}
 }
 
