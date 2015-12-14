@@ -34,12 +34,11 @@ body {
 		}
 	}
 
-	@media screen and (max-width: $hd) {
+	@media screen and (min-width: $hd) {
 		width: $sidebar-width / 1.2;
-		
 	}
 
-	@media screen and (max-width: $tablet) {
+	@media screen and (max-width: $hd) {
 		width: $sidebar-width;
 		h1 {
 			font-size: $title-size / 1.5;
@@ -97,9 +96,8 @@ body {
 	}
 
 	flex-basis: $box-width;
-	margin-bottom: 25px;
-	&:nth-last-child(-n+4) {
-		margin-bottom: 0;
+	&:not(:nth-last-child(-n+4)) {
+		margin-bottom: 25px;
 	}
 
 	position: relative;
