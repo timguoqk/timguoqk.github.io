@@ -11,10 +11,11 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	position: fixed;
 	float: left;
 	width: $sidebar-width;
-	margin-right: $margin-size;
 	height: calc(100vh - #{$margin-size * 2});
+	margin-right: $margin-size;
 	
 	font-family: $title-font;
 
@@ -26,10 +27,20 @@ body {
 		font-weight: 300;
 		color: $subtitle-color;
 		font-size: $subtitle-size;
+
+		&.active {
+			text-decoration: none;
+			color: #000000;
+		}
 	}
 
 	@media screen and (max-width: $hd) {
 		width: $sidebar-width / 1.2;
+		
+	}
+
+	@media screen and (max-width: $tablet) {
+		width: $sidebar-width;
 		h1 {
 			font-size: $title-size / 1.5;
 		}
@@ -38,35 +49,42 @@ body {
 		}
 	}
 
-	@media screen and (max-width: $tablet) {
-		width: $sidebar-width;
-	}
-
 	@media screen and (max-width: $mobile) {
 		float: none;
+		position: relative;
 		width: 100%;
 		height: auto;
 		margin-bottom: 15px;
-		align-items: flex-start;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		flex-direction: row;
 
 		h1 {
 			font-size: $title-size;
 			margin-top: 0;
 			margin-bottom: 5px;
+			flex-basis: 100%;
+		}
+
+		a {
+			margin-right: $spacing-unit;
 		}
 	}
 }
 
 .content {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	height: calc(100vh - #{$margin-size * 2});
+	margin-left: calc(#{$sidebar-width} + #{$margin-size});
 
 	perspective: 1700px;
 
 	@media screen and (max-width: $mobile) {
 		height: calc(100vh - #{$margin-size * 2 - 10px * 2 + $mobile-bar-height});
+		margin-left: 0;
 	}
 }
 

@@ -1,50 +1,40 @@
 ---
 layout: default
 ---
-<div class="wrapper">
-	<div class="ui breadcrumb">
-		<a class="section" href="/">Home</a>
-		{% if page.category %}
-			<i class="right chevron icon divider"></i>
-			<a class="section" href="/{{ page.category }}">{{ page.category }}</a>
-		{% endif %}
-		<i class="right chevron icon divider"></i>
-		<div class="active section">{{ page.title }}</div>
-	</div>
-	<div class="ui grid post">
+<!-- TODO: if it's home or about, don't display the title.  -->
+<div class="ui grid post">
 
-		<header class="centered row post-header">
-			<h1 class="post-title">{{ page.title }}</h1>
-			<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.category %} • {{ page.category }}{% endif %}</p>
-		</header>
+	<header class="centered row post-header">
+		<h1 class="post-title">{{ page.title }}</h1>
+		<p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.category %} • {{ page.category }}{% endif %}</p>
+	</header>
 
-		<div class="centered row">
-			<article class="twelve wide column" id="proj-content">
-				<div class="ui row medium images">
-					{% for img in page.images %}
-						<a href="../img/{{ img }}" data-lightbox="main"><img src="../img/{{ img }}" alt=""></a>
-					{% endfor %}
-				</div>
-				<div class="row">{{ content }}</div>
-			</article>
-
-			<div class="four wide column ui vertical text menu" id="proj-info">
-				{% if page.git or page.link%}
-					<div class="header item">For More Information...</div>
-					{% if page.git %}
-					<a href={{ page.git }} class="item proj-github">
-						<i class="large github square icon"></i> Github
-					</a>
-					{% endif %}
-					{% if page.link %}
-					<a href={{ page.link }} class="item proj-link">
-						<i class="large external icon"></i> Web Page
-					</a>
-					{% endif %}
-				{% endif %}
+	<div class="centered row">
+		<article class="twelve wide column" id="proj-content">
+			<div class="ui row medium images">
+				{% for img in page.images %}
+					<a href="../img/{{ img }}" data-lightbox="main"><img src="../img/{{ img }}" alt=""></a>
+				{% endfor %}
 			</div>
-		</div>
-		
+			<div class="row">{{ content }}</div>
+		</article>
 
+		<div class="four wide column ui vertical text menu" id="proj-info">
+			{% if page.git or page.link%}
+				<div class="header item">For More Information...</div>
+				{% if page.git %}
+				<a href={{ page.git }} class="item proj-github">
+					<i class="large github square icon"></i> Github
+				</a>
+				{% endif %}
+				{% if page.link %}
+				<a href={{ page.link }} class="item proj-link">
+					<i class="large external icon"></i> Web Page
+				</a>
+				{% endif %}
+			{% endif %}
+		</div>
 	</div>
+	
+
 </div>
