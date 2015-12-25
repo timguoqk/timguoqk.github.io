@@ -3,14 +3,17 @@ layout: default
 ---
 <div class="feature">
 	<div id="feature-img"></div>
-	<div class="description-area">
+	<!-- TODO: background css -->
+	<div class="description-area" style="background: ">
 		<div class="proj-description-head">
-			<h1 id="proj-title">{{ page.title }}</h1>
-			<h2 id="proj-category">{{ page.category }}</h2>
+			<h2 id="proj-title">{{ page.title }}</h2>
+			<h id="proj-category">{{ page.category }}</h3>
 			<h3 id="proj-date">{{ page.date | date: "%b %-d, %Y" }}</h3>
 		</div>
 		<div class="proj-gallery">
-			<img src="" alt="" class="proj-img">
+			{% for img in page.images %}
+			<img src="../img/{{ img }}" alt="{{ page.title }}" class="proj-img">
+			{% endfor %}
 		</div>
 		{% if page.git or page.link%}
 		<div class="proj-extras">
@@ -32,6 +35,7 @@ layout: default
 <script>
 	$(function() {
 		var colorThief = new ColorThief();
+		// TODO: get bkg instead
 		var color = colorThief.getColor(document.getElementById('feature-img'));
 		var Y = 0.2126*color[0] + 0.7152*color[1] + 0.0722*color[2];
 		var textColor = Y < 128 ? '#ffffff' : '#000000';

@@ -17,4 +17,5 @@ $spacing-unit: 15px;
 $mobile: 590px;
 $hd: 1024px;
 
-@import "layout";
+@import "global", "index", "proj";
+
