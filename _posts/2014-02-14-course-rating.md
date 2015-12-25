@@ -4,8 +4,8 @@ title:    "Academia, a course review and academic news platform"
 date:     2014-02-14
 category: Web
 git:      "https://github.com/timguoqk/Academia-Course"
+feature:  20140214_academia_logo.jpg
 images: 
-  - 20140214_academia_logo.jpg
   - 20140214_academia.jpg
 ---
 

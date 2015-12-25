@@ -5,8 +5,8 @@ date:     2015-05-14
 category: Web
 link:     "http://stack.dailybruin.com/daily-bruin-usac-endorsement-v-results/"
 git:      "https://github.com/timguoqk/usac-endorsement-visualization"
+feature:  20150514_endorsement_cover.png
 images: 
-  - 20150514_endorsement_cover.png
   - 20150514_endorsement1.png
   - 20150514_endorsement2.png
 ---

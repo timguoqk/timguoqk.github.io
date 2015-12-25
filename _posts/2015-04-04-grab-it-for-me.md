@@ -5,8 +5,8 @@ date:     2015-04-23
 category: iOS
 link:     "http://challengepost.com/software/grabitforme"
 git:      "https://github.com/timguoqk/grabItForMe"
+feature:  20150423_grab_cover.jpg
 images: 
-  - 20150423_grab_cover.jpg
   - 20150423_grab1.jpg
   - 20150423_grab2.jpg
 ---

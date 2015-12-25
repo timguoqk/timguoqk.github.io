@@ -5,6 +5,7 @@ date:     2015-04-23
 category: Python
 link:     "https://pypi.python.org/pypi/gdoc-json-parser"
 git:      "https://github.com/timguoqk/gdoc-json-parser"
+feature:  TODO
 ---
 
 *Published in PyPI.*

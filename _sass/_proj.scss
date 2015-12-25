@@ -1,1 +1,60 @@
 @import "global";
+
+.proj-description-box {
+	@extend .box;
+	width: 100%;
+	height: 50vh;
+	background-size: cover;
+
+	.proj-description {
+		width: calc(50% - #{$spacing-unit * 2});
+		margin-left: 50%;
+		padding: $spacing-unit;
+		height: calc(100% - #{$spacing-unit * 2});
+		display: inline-block;
+		background-color: rgba(255, 255, 255, 0.7);
+
+		.proj-description-head {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: flex-start;
+
+			* {
+				margin: 0;
+			}
+			h2 {
+				font: italic $subtitle-size lighter $proj-title-font;
+				flex-basis: 100%;
+				margin-bottom: $spacing-unit;
+			}
+			h3 {
+				font: $subtitle-size/1.5 lighter $proj-title-font;
+				flex-basis: 40%;
+			}
+			#proj-date {
+				text-align: right;
+			}
+
+			margin-bottom: $spacing-unit;
+		}
+
+		.proj-gallery {
+			@extend .box;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 45%;
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: auto;
+				display: none;
+			}
+			img:first-child {
+				display: block;
+			}
+		}
+	}
+}

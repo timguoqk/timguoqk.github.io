@@ -5,8 +5,8 @@ date:     2015-06-02
 category: Web
 link:     "http://timguoqk.me/polyforest"
 git:      "https://github.com/timguoqk/polyforest"
+feature:  20150602_polyforest_logo.png
 images: 
-  - 20150602_polyforest_logo.png
   - 20150602_polyforest1.png
   - 20150602_polyforest2.png
 ---
