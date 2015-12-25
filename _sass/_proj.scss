@@ -1,4 +1,4 @@
-@import "global";
+@import "global"; //TODO: correct way to import
 
 .proj-description-box {
 	@extend .box;
@@ -11,7 +11,9 @@
 		margin-left: 50%;
 		padding: $spacing-unit;
 		height: calc(100% - #{$spacing-unit * 2});
-		display: inline-block;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		background-color: rgba(255, 255, 255, 0.7);
 
 		.proj-description-head {
@@ -35,8 +37,6 @@
 			#proj-date {
 				text-align: right;
 			}
-
-			margin-bottom: $spacing-unit;
 		}
 
 		.proj-gallery {
@@ -57,4 +57,8 @@
 			}
 		}
 	}
+}
+
+.proj-content {
+	font: $paragraph-font-size $paragraph-font;
 }

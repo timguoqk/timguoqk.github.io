@@ -16,12 +16,10 @@ layout: default
 		{% if page.git or page.link%}
 		<div class="proj-extras">
 			{% if page.git %}
-			<div class="proj-git">
-			</div>
+			<div class="proj-git">{{ page.git }}</div>
 			{% endif %}
 			{% if page.link %}
-			<div class="proj-link">
-			</div>
+			<div class="proj-link">{{ page.link }}</div>
 			{% endif %}
 		</div>
 		{% endif %}
