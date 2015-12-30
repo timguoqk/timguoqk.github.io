@@ -28,10 +28,11 @@ layout: default
 <div class="proj-content">{{ content }}</div>
 
 <script>
-	$(function() {
+	$(window).load(function() {
 		var colorThief = new ColorThief();
-		// TODO: get bkg instead
-		var color = colorThief.getColor(document.getElementById('feature-img'));
+		var img = new Image();
+		img.src = $('.proj-description-box').css('background-image').slice(4, -1).replace(/"/g, "");
+		var color = colorThief.getColor(img);
 		var Y = 0.2126*color[0] + 0.7152*color[1] + 0.0722*color[2];
 		var textColor = Y < 128 ? '#ffffff' : '#000000';
 		$('.proj-description').css('background-color', 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ', 0.7)');
