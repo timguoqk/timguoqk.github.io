@@ -1,5 +1,12 @@
 @import "global";
 
+#index-list, #index-grid {
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+
 .box-wrapper {
 	@extend .box;
 

@@ -1,19 +1,23 @@
 ---
 layout: default
 ---
-<a class="box-wrapper"><img class="front"><img class="back"></a>
-<a class="box-wrapper"><img class="front"><img class="back"></a>
-<a class="box-wrapper"><img class="front"><img class="back"></a>
-<a class="box-wrapper"><img class="front"><img class="back"></a>
-<a class="box-wrapper"><img class="front"><img class="back"></a>
-<a class="box-wrapper"><img class="front"><img class="back"></a>
-<a class="box-wrapper"><img class="front"><img class="back"></a>
-<a class="box-wrapper"><img class="front"><img class="back"></a>
-<a class="box-wrapper"><img class="front"><img class="back"></a>
+<!-- <div id="index-grid active"> -->
+	{% for i in 1..9 %}
+	<a class="active index-grid box-wrapper"><img class="front"><img class="back"></a>
+	{% endfor %}
+<!-- </div> -->
+<!-- <div id="index-list">
+	TODO: better way to handle data
+	{% for post in site.posts %}
+	{% endfor %}
+</div> -->
 
 <script>
 	$(function() {
 		$('.box-wrapper').css('opacity', '0');
+		// $('#index-switch').on('click', function() {
+		// 	$('#index-grid, #index-list').toggleClass('active');
+		// });
 		// TODO: time the loading behaviors
 		$.getJSON('projects.json', function(data) {
 			var data = _.shuffle(data);

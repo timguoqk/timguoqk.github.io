@@ -26,7 +26,6 @@ layout: default
 	</div>
 </div>
 <div class="proj-content">{{ content }}</div>
-<!-- TODO: advanced css for markup -->
 
 <script>
 	$(function() {
@@ -35,6 +34,7 @@ layout: default
 		var color = colorThief.getColor(document.getElementById('feature-img'));
 		var Y = 0.2126*color[0] + 0.7152*color[1] + 0.0722*color[2];
 		var textColor = Y < 128 ? '#ffffff' : '#000000';
-		$('description-area').css('color', textColor); // TODO: children inherit
+		$('.proj-description').css('background-color', 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ', 0.7)');
+		$('.proj-description').css('color', textColor);
 	});
 </script>
