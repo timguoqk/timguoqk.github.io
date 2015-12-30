@@ -33,20 +33,6 @@ body {
 		}
 	}
 
-	@media screen and (min-width: $hd) {
-		width: $sidebar-width / 1.2;
-	}
-
-	@media screen and (max-width: $hd) {
-		width: $sidebar-width;
-		h1 {
-			font-size: $title-size / 1.5;
-		}
-		a {
-			font-size: $subtitle-size / 1.5;
-		}
-	}
-
 	@media screen and (max-width: $mobile) {
 		float: none;
 		position: relative;
@@ -94,11 +80,6 @@ body {
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	}
 }
-
-// TODO: gradient edge
-// .content {
-// 	background: linear-gradient(rgba(255, 255, 255, 0), white);
-// }
 
 .content p {
 	>a {

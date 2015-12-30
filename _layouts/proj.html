@@ -1,31 +1,33 @@
 ---
 layout: default
 ---
-<div class="proj-description-box" style="background-image: url(/img/{{ page.feature }})">
-	<div class="proj-description">
-		<div class="proj-description-head">
-			<h2 id="proj-title">{{ page.title }}</h2>
-			<h3 id="proj-category">{{ page.category }}</h3>
-			<h3 id="proj-date">{{ page.date | date: "%b %-d, %Y" }}</h3>
-		</div>
-		<div class="proj-gallery">
-			{% for img in page.images %}
-			<img src="../img/{{ img }}" alt="{{ page.title }}" class="proj-img">
-			{% endfor %}
-		</div>
-		{% if page.git or page.link%}
-		<div class="proj-extras">
-			{% if page.git %}
-			<div class="proj-git">{{ page.git }}</div>
+<div class="proj-container">
+	<div class="box proj-description-box" style="background-image: url(/img/{{ page.feature }})">
+		<div class="proj-description">
+			<div class="proj-description-head">
+				<h2 id="proj-title">{{ page.title }}</h2>
+				<h3 id="proj-category">{{ page.category }}</h3>
+				<h3 id="proj-date">{{ page.date | date: "%b %-d, %Y" }}</h3>
+			</div>
+			<div class="box proj-gallery">
+				{% for img in page.images %}
+				<img src="../img/{{ img }}" alt="{{ page.title }}" class="proj-img">
+				{% endfor %}
+			</div>
+			{% if page.git or page.link%}
+			<div class="proj-extras">
+				{% if page.git %}
+				<div class="proj-git">{{ page.git }}</div>
+				{% endif %}
+				{% if page.link %}
+				<div class="proj-link">{{ page.link }}</div>
+				{% endif %}
+			</div>
 			{% endif %}
-			{% if page.link %}
-			<div class="proj-link">{{ page.link }}</div>
-			{% endif %}
 		</div>
-		{% endif %}
 	</div>
+	<div class="proj-content">{{ content }}</div>
 </div>
-<div class="proj-content">{{ content }}</div>
 
 <script>
 	$(window).load(function() {
