@@ -3,7 +3,7 @@ layout:   proj
 title:    "Daily Bruin USAC 2015 Elections Page"
 date:     2015-04-29
 category: Web
-link:     "http://dailybruin.com/usac-election-2015/"
+link:     "http://stack.dailybruin.com/2015/05/13/usac-endorsements-vs-election-results/"
 git:      "https://github.com/daily-bruin/caeruleum/blob/master/pages/page-usac-elections-2015.php"
 feature:  20150429_usac_election.jpg
 images:
