@@ -7,6 +7,6 @@ feature: 20140101_mario.jpg
 images: 
 ---
 
-There're some pre-college works that I'm still quite proud of today.
+Some pre-college works that I'm still quite proud of today.
 
-- Mario Style Light box with distance sensor
+(The pitcure is a Mario Style Light box with distance sensor)

@@ -1,4 +1,9 @@
 .proj-container {
+	display: flex;
+	height: 100%;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
 	overflow: scroll;
 	// TODO: gradient edges
 }
@@ -28,12 +33,10 @@
 				margin: 0;
 			}
 			h2 {
-				font: italic $subtitle-size lighter $proj-title-font;
 				flex-basis: 100%;
 				margin-bottom: $spacing-unit;
 			}
 			h3 {
-				font: $subtitle-size/1.5 lighter $proj-title-font;
 				flex-basis: 40%;
 			}
 			#proj-date {
@@ -60,10 +63,14 @@
 
 		.proj-extras {
 			overflow: hidden;
+
+			display: flex;
+			flex-direction: column;
+
+			.proj-git, .proj-link {
+				font-family: "futura-pt";
+				font-weight: 300;
+			}
 		}
 	}
-}
-
-.proj-content {
-	font: $paragraph-font-size $paragraph-font;
 }

@@ -6,6 +6,24 @@ body {
 	}
 }
 
+h1 {
+	margin-top: 0;
+	font-family: $title-font;
+	font-weight: 600;
+	font-size: $title-size;
+}
+h2 {
+	font: italic $subtitle-size $proj-title-font;
+	font-weight: 300;
+}
+h3 {
+	font: $subtitle-size/1.5 $proj-title-font;
+	font-weight: 300;
+}
+p, li {
+	font: $paragraph-font-size $paragraph-font;
+}
+
 #site-sidebar {
 	display: flex;
 	flex-direction: column;
@@ -15,14 +33,10 @@ body {
 	height: calc(100vh - #{$margin-size * 2});
 	margin-right: $margin-size;
 	
-	font-family: $title-font;
 	text-align: left;
 
-	h1 {
-		font-weight: 600;
-		font-size: $title-size;
-	}
 	a {
+		font-family: $title-font;
 		font-weight: 300;
 		color: $subtitle-color;
 		font-size: $subtitle-size;
@@ -58,13 +72,8 @@ body {
 
 .content {
 	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
 	height: calc(100vh - #{$margin-size * 2});
 	margin-left: calc(#{$sidebar-width} + #{$margin-size});
-
-	perspective: 1700px;
 
 	@media screen and (max-width: $mobile) {
 		height: calc(100vh - #{$margin-size * 2 - 10px * 2 + $mobile-bar-height});
