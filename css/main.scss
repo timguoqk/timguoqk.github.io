@@ -3,7 +3,7 @@
 ---
 @charset "utf-8";
 
-$title-font: chaparral-pro, monospace;
+$title-font: chaparral-pro, helvetica, arial;
 $title-size: 32px;
 $subtitle-size: 24px;
 $subtitle-color: #9E9E9E;
@@ -20,5 +20,5 @@ $spacing-unit: 15px;
 $mobile: 590px;
 $hd: 1024px;
 
-@import "global", "index", "proj";
+@import "global", "index", "proj", "photo";
 

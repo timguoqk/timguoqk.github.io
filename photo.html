@@ -1,0 +1,14 @@
+---
+layout: default
+permalink: /photo/
+---
+<div class="photograph-container">
+	<img id="main-photograph">
+</div>
+
+
+<script>
+	$(function() {
+		$('#main-photograph').attr('src', '/img/photo/' + _.random(1, 9) + '.jpg');
+	});
+</script>
