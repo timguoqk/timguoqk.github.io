@@ -12,7 +12,7 @@ layout: default
 			{% if page.images %}
 			<div class="box proj-gallery">
 				{% for img in page.images %}
-				<img src="../img/{{ img }}" alt="{{ page.title }}" class="proj-img">
+				<a href="../img/{{ img }}" data-lightbox="proj-gallery"><img src="../img/{{ img }}" alt="{{ page.title }}" class="proj-img"></a>
 				{% endfor %}
 			</div>
 			{% endif %}
@@ -42,5 +42,7 @@ layout: default
 		var textColor = Y < 128 ? '#ffffff' : '#000000';
 		$('.proj-description').css('background-color', 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ', 0.7)');
 		$('.proj-description, a.proj-git, a.proj-link').css('color', textColor);
+
+		lightbox.init();
 	});
 </script>

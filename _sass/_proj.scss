@@ -23,6 +23,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		background-color: rgba(255, 255, 255, 0.7);
+		transition: background-color 1000ms linear;
 
 		.proj-description-head {
 			display: flex;
