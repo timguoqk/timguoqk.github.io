@@ -9,11 +9,13 @@ layout: default
 				<h3 id="proj-category">{{ page.category }}</h3>
 				<h3 id="proj-date">{{ page.date | date: "%b %-d, %Y" }}</h3>
 			</div>
+			{% if page.images %}
 			<div class="box proj-gallery">
 				{% for img in page.images %}
 				<img src="../img/{{ img }}" alt="{{ page.title }}" class="proj-img">
 				{% endfor %}
 			</div>
+			{% endif %}
 			{% if page.git or page.link%}
 			<div class="proj-extras">
 				<p>For more information:</p>

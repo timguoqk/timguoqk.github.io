@@ -7,6 +7,7 @@ link:     "http://stack.dailybruin.com/2015/05/13/usac-endorsements-vs-election-
 git:      "https://github.com/daily-bruin/caeruleum/blob/master/pages/page-usac-elections-2015.php"
 feature:  20150429_usac_election.jpg
 images:
+  - 20150429_usac_screenshot.png
 ---
 
 The Daily Bruin news page for UCLA's USAC 2015 elcection. We covered news about the election, Daily Bruin's endorsement and the results.
