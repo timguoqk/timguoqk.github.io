@@ -12,7 +12,7 @@ layout: default
 			{% if page.images %}
 			<div class="box proj-gallery">
 				{% for img in page.images %}
-				<a href="../img/{{ img }}" data-lightbox="proj-gallery"><img src="../img/{{ img }}" alt="{{ page.title }}" class="proj-img"></a>
+				<a class="proj-img" href="../img/{{ img }}" data-lightbox="proj-gallery"><img src="../img/{{ img }}" alt="{{ page.title }}"></a>
 				{% endfor %}
 			</div>
 			{% endif %}
