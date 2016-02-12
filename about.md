@@ -2,6 +2,7 @@
 layout: page
 title: About Me
 permalink: /about/
+noheader: true
 ---
 
 Hi I'm Tim. I study computer science and psychology at Brown University.

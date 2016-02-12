@@ -5,7 +5,16 @@
 	justify-content: space-between;
 
 	overflow: scroll;
-	// TODO: gradient edges
+
+	&:after {
+		position: absolute;
+    	bottom: 0px;
+    	left: 0;
+    	right: 0;
+    	content: "";
+    	height: 50px;
+    	background: linear-gradient(rgba(255,255,255,0),#fff);
+	}
 }
 
 .proj-description-box {
@@ -13,6 +22,7 @@
 	height: 60vh;
 	background-size: cover;
 	background-position: 50% 50%;
+	margin: 5px;
 
 	.proj-description {
 		width: calc(50% - #{$spacing-unit * 2});

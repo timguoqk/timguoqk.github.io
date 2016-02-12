@@ -1,6 +1,7 @@
 body {
 	margin: $margin-size;
 	@media screen and (max-width: $mobile) {
+		margin: $margin-size / 1.5;
 		margin-top: $margin-size - 10px;
 		margin-bottom: $margin-size - 10px;
 	}
@@ -15,13 +16,22 @@ h1 {
 h2 {
 	font: italic $subtitle-size $proj-title-font;
 	font-weight: 300;
+	@media screen and (max-width: $mobile) {
+		font-size: $subtitle-size/1.2;
+	}
 }
 h3 {
 	font: $subtitle-size/1.5 $proj-title-font;
 	font-weight: 300;
+	@media screen and (max-width: $mobile) {
+		font-size: $subtitle-size/1.5/1.2;
+	}
 }
 p, li {
 	font: $paragraph-font-size $paragraph-font;
+	@media screen and (max-width: $mobile) {
+		font-size: $mobile-paragraph-font-size;
+	}
 }
 
 #site-sidebar {

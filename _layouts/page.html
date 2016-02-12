@@ -2,8 +2,10 @@
 layout: default
 ---
 <div class="page-container">
+	{% unless page.noheader %}
 	<div class="page-header">
 		<h2 class="page-title">{{ page.title }}</h1>
 	</div>
+	{% endunless %}
 	<div class="page-content">{{ content }}</div>
 </div>
