@@ -29,6 +29,7 @@ h3 {
 }
 p, li {
 	font: $paragraph-font-size $paragraph-font;
+	font-weight: 300;
 	@media screen and (max-width: $mobile) {
 		font-size: $mobile-paragraph-font-size;
 	}
