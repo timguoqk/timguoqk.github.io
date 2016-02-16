@@ -6,6 +6,9 @@
 }
 
 .index-container {
+	// Hide the scroll bar
+	overflow: hidden;
+	
 	height: 100%;
 	display: flex;
 	flex-wrap: wrap;
