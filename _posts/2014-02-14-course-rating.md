@@ -1,6 +1,6 @@
 ---
 layout:   proj
-title:    "Academia, a course review and academic news platform"
+title:    "Academia, a course review platform"
 date:     2014-02-14
 category: Web
 git:      "https://github.com/timguoqk/Academia-Course"

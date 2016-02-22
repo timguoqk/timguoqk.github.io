@@ -25,6 +25,7 @@
 	margin: 5px;
 
 	.proj-description {
+		border-radius: 2px;
 		width: calc(50% - #{$spacing-unit * 2});
 		margin-left: 50%;
 		padding: $spacing-unit;
@@ -49,7 +50,7 @@
 				margin-bottom: $spacing-unit;
 			}
 			h3 {
-				flex-basis: 40%;
+				flex-basis: 50%;
 			}
 			#proj-date {
 				text-align: right;
@@ -80,8 +81,9 @@
 		.proj-extras {
 			overflow: hidden;
 
-			display: flex;
-			flex-direction: column;
+			* {
+				margin-right: 15px;
+			}
 
 			.proj-git, .proj-link {
 				font-family: "futura-pt", "Helvetica Neue", "Arial", sans-serif;

@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="proj-container">
-	<div class="box proj-description-box" style="background-image: url(/img/{{ page.feature }})">
+	<div class="non-hover-box proj-description-box" style="background-image: url(/img/{{ page.feature }})">
 		<div class="proj-description">
 			<div class="proj-description-head">
 				<h2 id="proj-title">{{ page.title }}</h2>
@@ -20,10 +20,10 @@ layout: default
 			<div class="proj-extras">
 				<p>For more information:</p>
 				{% if page.git %}
-				<a href={{ page.git }} class="proj-git">{{ page.git }}</a>
+				<a href={{ page.git }} class="proj-git"><i class="fa fa-github fa-2x"></i></a>
 				{% endif %}
 				{% if page.link %}
-				<a href={{ page.link }} class="proj-link">{{ page.link }}</a>
+				<a href={{ page.link }} class="proj-link"><i class="fa fa-external-link-square fa-2x"></i></a>
 				{% endif %}
 			</div>
 			{% endif %}
