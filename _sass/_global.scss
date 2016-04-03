@@ -87,6 +87,9 @@ p, li {
 	height: calc(100vh - #{$margin-size * 2});
 	margin-left: calc(#{$sidebar-width} + #{$margin-size});
 
+	display: flex;
+	justify-content: center;
+
 	@media screen and (max-width: $mobile) {
 		height: calc(100vh - #{$margin-size * 2 - 10px * 2 + $mobile-bar-height});
 		margin-left: 0;
