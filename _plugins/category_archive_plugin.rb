@@ -91,17 +91,15 @@ module Jekyll
       self.content = <<-EOS
 {% for post in page.posts %}
 <li class="box list-item">
-  <div class="left box">
-    <img src="{{ post.feature | prepend: "/img/"}} ">
-  </div>
+  <div class="left box" style="background-image:url({{ post.feature | prepend: "/img/"}})"></div>
   <div class="mid">
     <h3>{{ post.title }}</h3>
-    <p class="item-description">{{ post.content | strip_html | truncatewords: 25 }}</p>
+    <p class="item-description">{{ post.content | strip_html | truncatewords: 30 }}</p>
     <p class="category">{{ post.category }}</p>
   </div>
   <div class="right">
     {% if post.link %}
-    <a class="see-it button ripple" data-ripple="#4FC3F7" href="{{ post.link | replace: '//', '/' }}">
+    <a class="see-it button ripple" data-ripple="#4FC3F7" href="{{ post.link }}">
       See it
     </a>
     {% endif %}

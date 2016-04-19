@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   I aspire to build a better way to interact with the digital world.
   Though this site contains my works unrelated to this goal as well :)
 baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "http://timguoqk.github.io" # the base hostname & protocol for your site
+url: "http://timguoqk.me" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown

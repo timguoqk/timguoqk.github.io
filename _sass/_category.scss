@@ -12,18 +12,12 @@
 		.left {
 			width: 120px;
 			height: 120px;
-			overflow: hidden;
 			float: left;
 			margin-right: 30px;
 
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			img {
-				max-width: 120px;
-				max-height: 120px;
-			}
+			background-size: cover;
+  			background-position: center;
+  			background-repeat: no-repeat;
 		}
 
 		.mid {
@@ -37,6 +31,7 @@
 
 			p.item-description {
 				overflow: hidden;
+				height: 50px;
 			}
 
 			p.category {
@@ -58,7 +53,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				width: 63%;
+				width: 62%;
 			}
 
 			a.see-it {

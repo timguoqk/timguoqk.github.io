@@ -3,7 +3,7 @@ layout:   proj
 title:    "Daily Bruin's USAC Endorsement Visualization"
 date:     2015-05-14
 category: Web
-link:     "http://stack.dailybruin.com/daily-bruin-usac-endorsement-v-results/"
+link:     "http://stack.dailybruin.com/2015/05/13/usac-endorsements-vs-election-results/"
 git:      "https://github.com/timguoqk/usac-endorsement-visualization"
 feature:  20150514_endorsement_cover.png
 images: 
