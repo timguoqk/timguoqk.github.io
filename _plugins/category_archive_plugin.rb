@@ -79,11 +79,13 @@ module Jekyll
       @dir = dir
       @category = category
 
-      if site.config['category_archive'] && site.config['category_archive']['slugify']
-        @category_dir_name = Utils.slugify(@category) # require sanitize here
-      else 
-        @category_dir_name = @category
-      end
+      # if site.config['category_archive'] && site.config['category_archive']['slugify']
+      #   @category_dir_name = Utils.slugify(@category) # require sanitize here
+      # else 
+      #   @category_dir_name = @category
+      # end
+
+      @category_dir_name = Utils.slugify(@category) # require sanitize here
 
       @layout =  site.config['category_archive'] && site.config['category_archive']['layout'] || 'category_archive'
       self.ext = '.html'
