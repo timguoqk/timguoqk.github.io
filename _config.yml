@@ -2,9 +2,7 @@
 title: Tim Guo
 email: tim@timguoqk.me
 description: > # this means to ignore newlines until "baseurl:"
-  Hi I'm Tim. First-year CS + Psychology student at UCLA.
-  I aspire to build a better way to interact with the digital world.
-  Though this site contains my works unrelated to this goal as well :)
+  Tim's personal website.
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://timguoqk.me" # the base hostname & protocol for your site
 
