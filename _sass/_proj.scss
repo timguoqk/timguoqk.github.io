@@ -31,7 +31,7 @@
 	.proj-description {
 		border-radius: 2px;
 		width: calc(50% - #{$spacing-unit * 2});
-		margin-left: 50%;
+		margin-right: 50%;
 		padding: $spacing-unit;
 		height: calc(100% - #{$spacing-unit * 2});
 		display: flex;
@@ -86,7 +86,7 @@
 			overflow: hidden;
 
 			* {
-				margin-right: 15px;
+				margin-right: 5px;
 			}
 
 			.proj-git, .proj-link {
@@ -99,4 +99,9 @@
 
 .proj-content {
 	padding: 20px;
+	margin-bottom: 20px;
+	h2 {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
 }

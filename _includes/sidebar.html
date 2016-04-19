@@ -3,20 +3,10 @@
 	<a href="/" class="{% if page.url == '/' %}active{% endif %}">Home</a>
 	<a href="/about" class="{% if page.url == '/about/' %}active{% endif %}">About me</a>
 	<a href="/photo" class="{% if page.url == '/photo/' %}active{% endif %}">Photo</a>
-	<!-- {% if page.url == '/' %}
-	<a href="" id="index-switch">
-		
-	</a>
-	{% endif %} -->
-	
-	<!-- Breadcrumb for the current page -->
-	<!-- {% if page.category %}
-	<div class="ui breadcrumb">
-		<a class="section" href="/">Home</a>
-			<i class="right chevron icon divider"></i>
-			<a class="section" href="/{{ page.category }}">{{ page.category }}</a>
-		<i class="right chevron icon divider"></i>
-		<div class="active section">{{ page.title }}</div>
-	</div>
-	{% endif %} -->
+	<br />
+	{% assign sortedcats = site.categories | sort %}
+	{% for category in sortedcats %}
+	  {% assign c = category | first %}
+	  <a name="{{ c }}" href="/{{ c }}" class="{% if page.category == c %}active{% endif %}">{{ c }}</a>
+	{% endfor %}
 </div>

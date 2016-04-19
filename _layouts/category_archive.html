@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="category-archive">
+  <div>
+    <h1 class="title">{{ page.category }}</span>
+  </div>
+  <div>
+    <ul>
+      {{ content }}
+    </ul>
+  </div>
+</div>
+
+<script>
+	$(function() {
+		$('li.list-item').on('click', function() {
+			$(this).toggleClass('active');
+		});
+	});
+</script>
