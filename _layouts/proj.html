@@ -32,16 +32,32 @@ layout: default
 </div>
 
 <script>
+	function nearestColor(needle) {
+		var distance, minDistance = Infinity, rgb, value;
+		var colors = [[244,67,54], [156,39,176], [63,81,181], [33,150,243], [0,188,212], [0,150,136], [76,175,80], [139,195,74], [205,220,57], [255,235,59], [255,152,0], [255,87,34], [121,85,72], [96,125,139], [158,158,158], [0, 0, 0]];
+
+		for (var i = 0; i < colors.length; ++i) {
+			distance = Math.sqrt(
+				Math.pow(needle[0] - colors[i][0], 2) +
+				Math.pow(needle[1] - colors[i][1], 2) +
+				Math.pow(needle[2] - colors[i][2], 2)
+				);
+
+			if (distance < minDistance) {
+				minDistance = distance;
+				value = colors[i];
+			}
+		}
+
+		return value;
+	}
+
 	$(window).load(function() {
 		var colorThief = new ColorThief();
 		var img = new Image();
 		img.src = $('.proj-description-box').css('background-image').slice(4, -1).replace(/"/g, "");
-		var color = colorThief.getColor(img);
-		var Y = 0.2126*color[0] + 0.7152*color[1] + 0.0722*color[2];
-		var textColor = Y < 128 ? '#ffffff' : '#000000';
-		$('.proj-description').css('background-color', 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ', 0.7)');
-		$('.proj-description, a.proj-git, a.proj-link').css('color', textColor);
-
+		var color = nearestColor(colorThief.getColor(img));
+		$('.proj-description').css('background-color', 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ', 0.9)');
 		lightbox.init();
 	});
 </script>
