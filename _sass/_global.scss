@@ -132,7 +132,10 @@ p, li {
 	outline: none;
 	cursor: pointer;
 	color: white;
-	padding: 15px 25px;
+	padding: 10px;
+	@media screen and (max-width: $mobile) {
+		padding: 5px;
+	}
 	border-radius: 2px;
 	font-size: 16px;
 	text-decoration: none;

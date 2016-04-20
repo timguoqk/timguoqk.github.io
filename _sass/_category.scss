@@ -1,19 +1,36 @@
 .category-archive {
+	.title {
+		margin-bottom: $spacing-unit;
+		@media screen and (max-width: $mobile) {
+			display: none;
+		}
+	}
 	ul {
 		max-width: 1000px;
 	}
 
 	li.list-item {
 		height: 120px;
-		width: 100%;
+		@media screen and (max-width: $mobile) {
+			height: 80px;
+		}
+
+		width: calc(100% - 30px);
 		padding: 15px;
 		margin-bottom: 10px;
 
 		.left {
+			float: left;
+
 			width: 120px;
 			height: 120px;
-			float: left;
 			margin-right: 30px;
+
+			@media screen and (max-width: $mobile) {
+				width: 80px;
+				height: 80px;
+				margin-right: 15px;
+			}
 
 			background-size: cover;
   			background-position: center;
@@ -23,7 +40,10 @@
 		.mid {
 			display: inline-block;
 			position: relative;
-			width: calc(100% - 330px);
+			width: calc(100% - 280px);
+			@media screen and (max-width: $mobile) {
+				width: calc(100% - 220px);
+			}
 			h3 {
 				color: black;
 				margin-bottom: 10px;
@@ -32,11 +52,18 @@
 			p.item-description {
 				overflow: hidden;
 				height: 50px;
+
+				@media screen and (max-width: $mobile) {
+					display: none;
+				}
 			}
 
 			p.category {
 				position: absolute;
 				top: calc(100% + 20px);
+				@media screen and (max-width: $mobile) {
+					display: none;
+				}
 			}
 			margin-right: 30px;
 		}
@@ -53,7 +80,8 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				width: 62%;
+				width: 100%;
+				right: 10px;
 			}
 
 			a.see-it {
