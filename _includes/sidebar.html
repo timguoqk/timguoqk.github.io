@@ -7,6 +7,6 @@
 	{% assign sortedcats = site.categories | sort %}
 	{% for category in sortedcats %}
 	  {% assign c = category | first %}
-	  <a name="{{ c }}" href="/{{ c }}" class="{% if page.category == c %}active{% endif %}">{{ c }}</a>
+	  <a name="{{ c }}" href="/{{ c | slugify }}" class="{% if page.category == c %}active{% endif %}">{{ c }}</a>
 	{% endfor %}
 </div>
