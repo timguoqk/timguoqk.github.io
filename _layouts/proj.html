@@ -19,10 +19,10 @@ layout: default
 			{% if page.git or page.link%}
 			<div class="proj-extras">
 				{% if page.git %}
-				<a href={{ page.git }} class="proj-git" style="color: #ffffff"><i class="fa fa-github fa-2x"></i></a>
+				<a href={{ page.git }} class="proj-git"><i class="fa fa-github fa-2x"></i></a>
 				{% endif %}
 				{% if page.link %}
-				<a href={{ page.link }} class="proj-link" style="color: #ffffff"><i class="fa fa-external-link-square fa-2x"></i></a>
+				<a href={{ page.link }} class="proj-link"><i class="fa fa-external-link-square fa-2x"></i></a>
 				{% endif %}
 			</div>
 			{% endif %}
@@ -51,10 +51,10 @@ layout: default
 
 		return value;
 	}
+	var colorThief = new ColorThief();
+	var img = new Image();
 
 	$(window).load(function() {
-		var colorThief = new ColorThief();
-		var img = new Image();
 		img.src = $('.proj-description-box').css('background-image').slice(4, -1).replace(/"/g, "");
 		var color = nearestColor(colorThief.getColor(img));
 		$('.proj-description').css('background-color', 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ', 0.9)');
